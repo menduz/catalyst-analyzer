@@ -2,7 +2,7 @@
   "compilerOptions": {
     "strict": true,
     "outDir": "dist",
-    "target": "es2017",
+    "target": "es2020",
     "module": "commonjs",
     "moduleResolution": "node",
     "sourceMap": true,
@@ -12,7 +12,8 @@
     "noImplicitReturns": true,
     "noImplicitAny": true,
     "noImplicitThis": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true
   },
   "include": [
     "src"
