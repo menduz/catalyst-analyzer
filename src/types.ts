@@ -7,6 +7,7 @@ import type {
   IMetricsComponent,
 } from "@well-known-components/interfaces"
 import { metricDeclarations } from "./metrics"
+import { ICatalystDbProvider } from "./ports/catalystDbProvider"
 import { IDeploymentsProviderComponent } from "./ports/deploymentsProvider"
 
 export type GlobalContext = {
@@ -21,12 +22,15 @@ export type BaseComponents = {
   fetch: IFetchComponent
   metrics: IMetricsComponent<keyof typeof metricDeclarations>
   deploymentsProvider: IDeploymentsProviderComponent
+  catalystDbProvider: ICatalystDbProvider
 }
 
 // components used in runtime
 export type AppComponents = BaseComponents & {
   statusChecks: IBaseComponent
 }
+
+export type Components<T extends keyof AppComponents> = Pick<AppComponents, T>
 
 // components used in tests
 export type TestComponents = BaseComponents & {

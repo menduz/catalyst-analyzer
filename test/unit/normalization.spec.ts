@@ -1,4 +1,5 @@
-import { filesForRanges, normalizeServerDomain } from "../../src/ports/deploymentsProvider"
+import { normalizeServerDomain } from "../../src/logic/naming"
+import { filesForRanges } from "../../src/ports/deploymentsProvider"
 
 describe("unit", () => {
   it("normalizeServerDomain", () => {
